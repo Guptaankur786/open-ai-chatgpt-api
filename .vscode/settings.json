@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/f644832a-0001-477f-ae3a-fac9597b514d/resourceGroups/nodechatgptapi_group/providers/Microsoft.Web/sites/chatgptnodeapi",
+    "appService.deploySubpath": "."
+}
