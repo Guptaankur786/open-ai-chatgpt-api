@@ -23,10 +23,10 @@ app.get('/', async (req, res) => {
   })
 })
 
-app.get('/query', async (req, res) => {
+app.post('/', async (req, res) => {
   try {
-    // const prompt = req.body.prompt;
-    const prompt = "Give me a list of apps" ;
+    const prompt = req.body.prompt;
+
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${prompt}`,
@@ -47,4 +47,4 @@ app.get('/query', async (req, res) => {
   }
 })
 
-app.listen(PORT, () => console.log('AI server started on http://localhost:5000'))
+app.listen(PORT, () => console.log('AI server started on http://localhost:8080'))
