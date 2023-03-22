@@ -23,10 +23,10 @@ app.get('/', async (req, res) => {
   })
 })
 
-app.post('/', async (req, res) => {
+app.get('/query', async (req, res) => {
   try {
-    const prompt = req.body.prompt;
-
+    // const prompt = req.body.prompt;
+    const prompt = "Give me a list of apps" ;
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${prompt}`,
